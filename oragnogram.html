@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management - JDPC Enugu Diocese</title>
+    <link href="https://unpkg.com/tailwindcss@3.4.10/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-blue-700 text-white py-2 px-4" hidden md:block>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-xs md:text-sm gap-3 md:gap-0">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-6 text-center md:text-left">
+                <a href="tel:+2340816331439" class="flex items-center justify-center md:justify-start gap-2 hover:text-gray-200">
+                    <i class="fas fa-phone"></i>
+                    <span class="hidden sm:inline">+234 (0)816331439</span>
+                    <span class="sm:hidden">+234 816331439</span>
+                </a>
+                <a href="mailto:admin@jdpcenugu.org.ng" class="flex items-center justify-center md:justify-start gap-2 hover:text-gray-200 truncate">
+                    <i class="fas fa-envelope"></i>
+                    <span class="truncate">admin@jdpcenugu.org.ng</span>
+                </a>
+            </div>
+            <div class="flex gap-3">
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo Section -->
+                <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-24%20at%2008.20.04_67b25f43-xWDOF6gzJUJ1dDdhLYINkbUqb5zP3K.jpg" alt="JDPC Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
+                    <div class="hidden sm:block">
+                        <h1 class="text-cyan-600 font-bold text-xs md:text-xl leading-tight">JUSTICE, DEVELOPMENT AND</h1>
+                        <h2 class="text-cyan-600 font-bold text-xs md:text-lg leading-tight">PEACE/CARITAS COMMISSION</h2>
+                        <h3 class="text-gray-600 text-xs md:text-sm">(JDPC) ENUGU DIOCESE</h3>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex gap-1">
+                    <a href="index.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-600 text-sm md:text-base">HOME</a>
+                    <!-- Dropdown for About Us -->
+                    <div class="relative group text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">
+                        ABOUT US <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        <div class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                            <a href="index.html#about" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm">About Us</a>
+                            <a href="index.html#aims" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm border-t">Aims & Objectives</a>
+                        </div>
+                    </div>
+                    <!-- Dropdown for Management -->
+                    <div class="relative group text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">
+                        MANAGEMENT <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        <div class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                            <a href="#management-team" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm">Management Team</a>
+                            <a href="#organogram" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm border-t">Organogram</a>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">PROJECTS</a>
+                    <a href="contact.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">CONTACT US</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-teal-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-menu lg:hidden mt-4 pb-4 border-t pt-4">
+                <a href="index.html" class="block bg-yellow-500 text-white px-4 py-2 font-semibold hover:bg-yellow-600 mb-2 rounded">HOME</a>
+                <!-- Mobile dropdown for About Us -->
+                <button id="mobile-about-btn" class="w-full text-left text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded flex justify-between items-center">
+                    ABOUT US <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobile-about-dropdown" class="dropdown-menu bg-gray-100 rounded mb-2">
+                    <a href="index.html#about" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm">About Us</a>
+                    <a href="index.html#aims" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm border-t border-gray-300">Aims & Objectives</a>
+                </div>
+                <!-- Mobile dropdown for Management -->
+                <button id="mobile-management-btn" class="w-full text-left text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded flex justify-between items-center">
+                    MANAGEMENT <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobile-management-dropdown" class="dropdown-menu bg-gray-100 rounded mb-2">
+                    <a href="#management-team" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm">Management Team</a>
+                    <a href="#organogram" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm border-t border-gray-300">Organogram</a>
+                </div>
+                <a href="projects.html" class="block text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded">PROJECTS</a>
+                <a href="contact.html" class="block text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white rounded">CONTACT US</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section for Management -->
+    <section class="relative h-48 sm:h-64 md:h-96 bg-gray-300 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400'%3E%3Crect fill='%234a5568' width='1200' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='%23fff' text-anchor='middle' dominant-baseline='middle'%3EManagement - Our Leadership%3C/text%3E%3C/svg%3E" alt="Management Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-white text-2xl md:text-4xl font-bold text-center z-10">Management</h1>
+        </div>
+    </section>
+
+    <!-- Management Team Section -->
+    <section id="management-team" class="py-8 md:py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center">Management Team</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Placeholder cards for team members -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-user text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Diocesan JDPC Coordinator</h3>
+                    <p class="text-gray-700 text-sm">Rev. Fr. [Name]</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-user text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Program Manager</h3>
+                    <p class="text-gray-700 text-sm">[Name]</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-user text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">Finance Manager</h3>
+                    <p class="text-gray-700 text-sm">[Name]</p>
+                </div>
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Organogram Section -->
+    <section id="organogram" class="py-8 md:py-16 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="flex justify-center mb-6">
+                <button id="toggle-organogram" class="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 font-semibold transition-colors flex items-center gap-2">
+                    <i class="fas fa-chevron-down"></i>
+                    View Organogram
+                </button>
+            </div>
+            <div id="organogram-content" class="hidden">
+                <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center">Organogram</h2>
+                <div class="mermaid">
+                    graph TD
+                        A[Bishop of Enugu Diocese] --> B[JDPC Enugu Board]
+                        A --> C[National Bishop Conference<br/>(CBCN)]
+                        A --> D[Provincial Bishops Board]
+                        
+                        B --> F[Diocesan JDPC Coordinator]
+                        C --> E[Director, Church & Society/<br/>JDPC National Caritas Nigeria]
+                        D --> G[JDPC Provincial Coordinator]
+                        
+                        E -.-> G
+                        G -.-> F
+                        
+                        F --> H[Program Manager]
+                        F --> I[Legal Adviser 1]
+                        F --> J[Legal Adviser 2]
+                        F --> K[Finance Manager]
+                        
+                        H --> L[Project Officer]
+                        H --> M[M&E Officer]
+                        H --> N[Program Volunteers]
+                        
+                        K --> O[Communication Officer]
+                        K --> P[Finance Volunteers]
+                        
+                        style A fill:#e6f3ff,stroke:#003366,stroke-width:2px
+                        style F fill:#e6f3ff,stroke:#003366,stroke-width:2px
+                        style H fill:#e6f3ff,stroke:#003366,stroke-width:2px
+                        style K fill:#e6f3ff,stroke:#003366,stroke-width:2px
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Section -->
+    <section class="py-8 md:py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- About JDPC -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-4">ABOUT JDPC ENUGU</h3>
+                    <p class="text-gray-700 text-sm md:text-base mb-4 text-justify">
+                        Justice and Peace are imperative for meaningful development. The JDPC Enugu Diocese serves as an arm of the Catholic Church, champions human rights and advocates for good governance.
+                    </p>
+                    <p class="text-gray-700 text-sm md:text-base mb-4 text-justify">
+                        Operating as part of the Catholic Diocese of Enugu, JDPC is a faith-based, non-profit, non-governmental organization committed to establishing just structures and preserving human dignity.
+                    </p>
+                    <p class="text-gray-700 text-sm md:text-base text-justify">
+                        Collaborating with the Caritas network and six other Dioceses, JDPC Enugu serves a population of 2,637,113, including 1,834,432 Catholics, across multiple local government areas in Enugu State.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-4">QUICK LINKS</h3>
+                    <ul class="space-y-2 text-sm md:text-base">
+                        <li><a href="index.html" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Home</a></li>
+                        <li><a href="index.html#about" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> About Us</a></li>
+                        <li><a href="index.html#aims" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Aims & Objectives</a></li>
+                        <li><a href="#management-team" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Management Team</a></li>
+                        <li><a href="#organogram" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Organogram</a></li>
+                        <li><a href="projects.html" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-600 flex items-center gap-2 text-gray-700"><i class="fas fa-chevron-right text-xs"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold text-blue-600 mb-4">CONTACT US</h3>
+                    <div class="space-y-3 text-sm md:text-base">
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1 flex-shrink-0 text-blue-600"></i>
+                            <span class="text-gray-700">JDPC Office<br>Catholic Diocesan Secretariat,<br>Ogui Enugu</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-phone flex-shrink-0 text-blue-600"></i>
+                            <a href="tel:+2340816331439" class="text-gray-700 hover:text-yellow-600">+234 (0)816 331 439</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-phone flex-shrink-0 text-blue-600"></i>
+                            <a href="tel:+23408069002466" class="text-gray-700 hover:text-yellow-600">+234 (0)806 900 2466</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-envelope flex-shrink-0 text-blue-600"></i>
+                            <a href="mailto:admin@jdpcenugu.org.ng" class="text-gray-700 hover:text-yellow-600 truncate">admin@jdpcenugu.org.ng</a>
+                        </p>
+                        <div class="flex gap-3 mt-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded flex items-center justify-center text-white text-sm">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 w-10 h-10 rounded flex items-center justify-center text-white text-sm">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded flex items-center justify-center text-white text-sm">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded flex items-center justify-center text-white text-sm">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 w-10 h-10 rounded flex items-center justify-center text-white text-sm">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyan-600 text-white py-8 md:py-12 px-4">
+        <div class="container mx-auto">
+            <div class="border-t border-teal-700 mt-6 md:mt-8 pt-4 md:pt-6 text-center text-xs md:text-sm">
+                <p>© 2023. <span class="font-semibold">JDPC Enugu.</span> All rights reserved.</p>
+                <p class="mt-2">Website designed and hosted by <span class="font-semibold">BuildingWealth Info-Tech Limited</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({startOnLoad: true, theme: 'default'});
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileAboutBtn = document.getElementById('mobile-about-btn');
+        const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+        const mobileManagementBtn = document.getElementById('mobile-management-btn');
+        const mobileManagementDropdown = document.getElementById('mobile-management-dropdown');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileAboutBtn.addEventListener('click', () => {
+            mobileAboutDropdown.classList.toggle('active');
+        });
+
+        mobileManagementBtn.addEventListener('click', () => {
+            mobileManagementDropdown.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileAboutDropdown.classList.remove('active');
+                mobileManagementDropdown.classList.remove('active');
+            });
+        });
+
+        // Organogram toggle
+        const toggleBtn = document.getElementById('toggle-organogram');
+        const organogramContent = document.getElementById('organogram-content');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            organogramContent.classList.toggle('hidden');
+            if (organogramContent.classList.contains('hidden')) {
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i> View Organogram';
+            } else {
+                toggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i> Hide Organogram';
+                // Re-render Mermaid after toggle
+                mermaid.init();
+            }
+        });
+    </script>
+</body>
+</html>

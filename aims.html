@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aims & Objectives - JDPC Enugu Diocese</title>
+    <link href="https://unpkg.com/tailwindcss@3.4.10/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .mobile-menu.active {
+            display: block;
+        }
+        .mobile-menu {
+            display: none;
+        }
+        .dropdown-menu.active {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-blue-700 text-white py-2 px-4" hidden md:block>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-xs md:text-sm gap-3 md:gap-0">
+            <div class="flex flex-col md:flex-row gap-3 md:gap-6 text-center md:text-left">
+                <a href="tel:+2340816331439" class="flex items-center justify-center md:justify-start gap-2 hover:text-gray-200">
+                    <i class="fas fa-phone"></i>
+                    <span class="hidden sm:inline">+234 (0)816331439</span>
+                    <span class="sm:hidden">+234 816331439</span>
+                </a>
+                <a href="mailto:admin@jdpcenugu.org.ng" class="flex items-center justify-center md:justify-start gap-2 hover:text-gray-200 truncate">
+                    <i class="fas fa-envelope"></i>
+                    <span class="truncate">admin@jdpcenugu.org.ng</span>
+                </a>
+            </div>
+            <div class="flex gap-3">
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-200"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo Section -->
+                <div class="flex items-center gap-2 md:gap-4 flex-shrink-0">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-24%20at%2008.20.04_67b25f43-xWDOF6gzJUJ1dDdhLYINkbUqb5zP3K.jpg" alt="JDPC Logo" class="w-12 h-12 md:w-16 md:h-16 object-contain">
+                    <div class="hidden sm:block">
+                        <h1 class="text-cyan-600 font-bold text-xs md:text-xl leading-tight">JUSTICE, DEVELOPMENT AND</h1>
+                        <h2 class="text-cyan-600 font-bold text-xs md:text-lg leading-tight">PEACE/CARITAS COMMISSION</h2>
+                        <h3 class="text-gray-600 text-xs md:text-sm">(JDPC) ENUGU DIOCESE</h3>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex gap-1">
+                    <a href="index.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-600 text-sm md:text-base">HOME</a>
+                    <!-- Dropdown for About Us -->
+                    <div class="relative group text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">
+                        ABOUT US <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        <div class="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+                            <a href="index.html#about" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm">About Us</a>
+                            <a href="aims-objectives.html" class="block px-4 py-2 text-cyan-600 hover:bg-yellow-500 hover:text-white text-sm border-t">Aims & Objectives</a>
+                        </div>
+                    </div>
+                    <a href="management.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">MANAGEMENT</a>
+                    <a href="projects.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">PROJECTS</a>
+                    <a href="contact.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white text-sm md:text-base transition-colors">CONTACT US</a>
+                    <a href="gallery.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold bg-yellow-500 text-white text-sm md:text-base">GALLERY</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-teal-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-menu lg:hidden mt-4 pb-4 border-t pt-4">
+                <a href="index.html" class="block bg-yellow-500 text-white px-4 py-2 font-semibold hover:bg-yellow-600 mb-2 rounded">HOME</a>
+                <!-- Mobile dropdown for About Us -->
+                <button id="mobile-about-btn" class="w-full text-left text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded flex justify-between items-center">
+                    ABOUT US <i class="fas fa-chevron-down text-xs"></i>
+                </button>
+                <div id="mobile-about-dropdown" class="dropdown-menu bg-gray-100 rounded mb-2">
+                    <a href="index.html#about" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm">About Us</a>
+                    <a href="aims-objectives.html" class="block px-6 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white text-sm border-t border-gray-300">Aims & Objectives</a>
+                </div>
+                <a href="management.html" class="block text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded">MANAGEMENT</a>
+                <a href="projects.html" class="block text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white mb-2 rounded">PROJECTS</a>
+                <a href="contact.html" class="block text-gray-700 px-4 py-2 font-semibold hover:bg-yellow-500 hover:text-white rounded">CONTACT US</a>
+                <a href="gallery.html" class="text-cyan-600 px-3 md:px-4 py-2 font-semibold bg-yellow-500 text-white text-sm md:text-base">GALLERY</a>
+            </nav>
+        </div>
+    </header>
+
+   
+    <!-- Aims & Objectives Main Section -->
+    <section class="py-8 md:py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-start">
+                <!-- Aims List -->
+                <div class="order-2 md:order-1">
+                    <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6">Our Aims & Objectives</h2>
+                    <ul class="space-y-4 text-gray-700 text-sm md:text-base">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To promote the quality of life for all people, through the enhancement of human development.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To promote and sustain human rights and dignity.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To animate and form groups to participate in their own development for the common good.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To promote local government meetings, workshops and campaigns aimed at engaging budget advocacy; citizens’ enlightenment campaigns, and election monitoring to ensure accountability and transparency.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To build capacity of individuals and groups by giving them voice so that they are able to help themselves and contribute meaningfully to the society.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To identify unjust structures and take corrective actions.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To create a forum for information gathering and dissemination as a community empowerment tool.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To promote Legal assistance, Legal aid and counselling Legal services for Awaiting Trial Persons Public Interest Litigation.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To promote the Catholic Social Teachings, as a way of contributing to the process of social transformation.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-blue-600 mt-1 flex-shrink-0"></i>
+                            <span>To network with development partners, international agencies, government agencies and NGOs for integral human development, poverty reduction and good governance.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Featured Content -->
+                <div class="order-1 md:order-2">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300'%3E%3Crect fill='%236b7280' width='500' height='300'/%3E%3Ctext x='50%25' y='50%25' font-size='18' fill='%23fff' text-anchor='middle' dominant-baseline='middle'%3ENotebook &amp; Design Image%3C/text%3E%3C/svg%3E" alt="Featured Image" class="w-64 rounded-lg shadow-lg mx-auto mb-4">
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-bold text-blue-600 mb-2">JDPC Enugu Diocese Launches Interactive Website to Strengthen Advocacy for Justice and Peace</h3>
+                        <p class="text-gray-700 text-sm md:text-base">
+                            JDPC Enugu, a Catholic organization promoting justice, launched communities and amplify their impact initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-cyan-600 text-white py-8 md:py-12 px-4">
+        <!--  Made footer padding responsive -->
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- About JDPC -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-4">ABOUT JDPC ENUGU</h3>
+                    <div class="flex gap-4 mb-4">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-24%20at%2008.20.04_67b25f43-xWDOF6gzJUJ1dDdhLYINkbUqb5zP3K.jpg" alt="JDPC Logo" class="w-16 h-16 md:w-20 md:h-20 object-contain flex-shrink-0">
+                        <div>
+                            <p class="text-xs md:text-sm mb-2">Justice and Peace are imperative for meaningful development. The JDPC Enugu Diocese serves as an arm of the Catholic Church, champions human rights and advocates for good governance.</p>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm mb-2">Operating as part of the Catholic Diocese of Enugu, JDPC is a faith-based, non-profit, non-governmental organization committed to establishing just structures and preserving human dignity.</p>
+                    <p class="text-xs md:text-sm">Collaborating with the Caritas network and six other Dioceses, JDPC Enugu serves a population of 2,637,113, including 1,834,432 Catholics, across multiple local government areas in Enugu State.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-4">QUICK LINKS</h3>
+                    <ul class="space-y-2 text-xs md:text-sm">
+                        <li><a href="#home" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> About Us</a></li>
+                        <li><a href="#aims" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Aims & Objectives</a></li>
+                        <li><a href="#management" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Management Team</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Organogram</a></li>
+                        <li><a href="#projects" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Projects</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-400 flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-4">CONTACT US</h3>
+                    <div class="space-y-3 text-xs md:text-sm">
+                        <p class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1 flex-shrink-0"></i>
+                            <span>JDPC Office<br>Diocesan Catholic Secretariat,<br>Enugu</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-phone flex-shrink-0"></i>
+                            <a href="tel:+2340816331439" class="hover:text-yellow-400">+234 (0)816331439</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-phone flex-shrink-0"></i>
+                            <a href="tel:+2340906902466" class="hover:text-yellow-400">+234 (0)8069002466</a>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-envelope flex-shrink-0"></i>
+                            <a href="mailto:admin@jdpcenugu.org.ng" class="hover:text-yellow-400 truncate">admin@jdpcenugu.org.ng</a>
+                        </p>
+                        <div class="flex gap-3 mt-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded flex items-center justify-center text-sm">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 w-10 h-10 rounded flex items-center justify-center text-sm">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded flex items-center justify-center text-sm">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded flex items-center justify-center text-sm">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="bg-green-600 hover:bg-green-700 w-10 h-10 rounded flex items-center justify-center text-sm">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-teal-700 mt-6 md:mt-8 pt-4 md:pt-6 text-center text-xs md:text-sm">
+                <p>© 2023. <span class="font-semibold">JDPC Enugu.</span> All rights reserved.</p>
+                <p class="mt-2">Website designed and hosted by <span class="font-semibold">BuildingEwealth Info-Tech Limited</span></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileAboutBtn = document.getElementById('mobile-about-btn');
+        const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        mobileAboutBtn.addEventListener('click', () => {
+            mobileAboutDropdown.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileAboutDropdown.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
