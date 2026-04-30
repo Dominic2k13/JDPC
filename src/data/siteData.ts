@@ -37,19 +37,19 @@ export const NAV_LINKS = [
 export const HERO_SLIDES = [
   {
     id: 1,
-    image: "https://placehold.co/1400x600/1a4a6b/ffffff?text=JDPC+Enugu+Diocese",
+    image: "/hero-jdpc.jpg",
     title: "Justice, Development and Peace",
     subtitle: "Championing human rights and good governance across Enugu Diocese",
   },
   {
     id: 2,
-    image: "https://placehold.co/1400x600/2d7a9a/ffffff?text=Community+Outreach",
+    image: "/image-food.jpg",
     title: "Serving 2.6 Million People",
     subtitle: "Collaborating with Caritas and six other Dioceses for integral human development",
   },
   {
     id: 3,
-    image: "https://placehold.co/1400x600/8B6914/ffffff?text=Empowering+Communities",
+    image: "/jdpc-hero1.jpg",
     title: "Building Capacity for Change",
     subtitle: "Faith-based, non-profit, non-governmental organization committed to establishing just structures",
   },
