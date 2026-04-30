@@ -12,7 +12,7 @@ export default function Management() {
           <div className="flex flex-col md:flex-row gap-8 mb-14 items-start">
             <div className="flex flex-col items-center md:items-start">
               <img
-                src="https://placehold.co/220x260/1a4a6b/ffffff?text=Fr.+Onuigbo"
+                src="/coordinator.jpeg"
                 alt="Rev. Fr. Dr. Chukwudi Donatus Onuigbo"
                 className="w-52 rounded shadow-md mb-3 object-cover"
               />
