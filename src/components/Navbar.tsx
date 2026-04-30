@@ -48,7 +48,7 @@ export default function Navbar() {
                 className={`px-5 py-2 text-sm font-medium rounded-md transition-colors ${
                   isActive(link.path)
                     ? "text-primary bg-primary/10"
-                    : "text-gray-700 hover:text-primary hover:bg-gray-100"
+                    : "text-gray-700 hover:text-primary hover:bg-yellow-500"
                 }`}
               >
                 {link.label}

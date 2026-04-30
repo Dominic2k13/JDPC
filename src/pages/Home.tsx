@@ -13,7 +13,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <FadeIn direction="left">
             <img
-              src="https://placehold.co/550x380/1a4a6b/ffffff?text=JDPC+Community+Outreach"
+              src="/father.jpeg"
               alt="JDPC community work"
               className="w-full rounded shadow-md object-cover"
             />
