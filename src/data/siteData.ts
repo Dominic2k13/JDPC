@@ -108,7 +108,6 @@ export const THEMATIC_AREAS = [
   },
 ];
 
-// Keep the rest of your data unchanged
 export const AIMS = [
   "To promote the quality of life for all people, through the enhancement of human development.",
   "To promote and sustain human rights and dignity.",
@@ -152,9 +151,15 @@ export const GALLERY_CATEGORIES = [
   "JDPC Enugu Team's Advocacy Visit to Enugu East Local Government Chairman, Chief Alex Ugwu",
 ];
 
-export const GALLERY_IMAGES = Array.from({ length: 15 }, (_, i) => ({
-  id: i + 1,
-  src: `https://placehold.co/400x300/1a4a6b/ffffff?text=Gallery+${i + 1}`,
-  category: GALLERY_CATEGORIES[Math.floor(Math.random() * (GALLERY_CATEGORIES.length - 1)) + 1],
-  alt: `JDPC Activity ${i + 1}`,
-}));
+// ✅ CLEAN GALLERY_IMAGES (Updated)
+export const GALLERY_IMAGES = [
+  { id: 1,  src: "/gallery1.jpeg",  category: "All", alt: "JDPC Activity 1" },
+  { id: 2,  src: "/gallery2.jpeg",  category: "All", alt: "JDPC Activity 2" },
+  { id: 3,  src: "/gallery3.jpeg",  category: "All", alt: "JDPC Activity 3" },
+  { id: 4,  src: "/gallery1.jpeg",  category: "All", alt: "JDPC Activity 1" },
+  { id: 5,  src: "/gallery2.jpeg",  category: "All", alt: "JDPC Activity 2" },
+  { id: 6,  src: "/gallery3.jpeg",  category: "All", alt: "JDPC Activity 3" },
+  { id: 7,  src: "/gallery1.jpeg",  category: "All", alt: "JDPC Activity 1" },
+  { id: 8,  src: "/gallery2.jpeg",  category: "All", alt: "JDPC Activity 2" },
+  { id: 9,  src: "/gallery3.jpeg",  category: "All", alt: "JDPC Activity 3" },
+];

@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
-
-// Import social media icons from react-icons
 import { 
   FaFacebookF, 
   FaTwitter, 
@@ -10,19 +8,29 @@ import {
   FaWhatsapp 
 } from "react-icons/fa";
 
+
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        {/* ABOUT */}
+        {/* ABOUT SECTION WITH LOGO */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center font-bold text-xs text-center leading-tight p-2 border border-white/20">
-              JDPC<br />ENUGU
+          <div className="flex items-center gap-4 mb-6">
+            <img 
+              src="/jdpc-logo.jpeg"
+              alt="JDPC Enugu Logo" 
+              className="w-16 h-16 object-contain rounded-full border border-white/30 bg-white/10 p-1"
+            />
+            <div>
+              <h3 className="font-bold text-xl uppercase tracking-wide leading-tight">
+                JDPC Enugu
+              </h3>
+              <p className="text-white/70 text-sm">Justice, Development and Peace Commission</p>
             </div>
-            <h3 className="font-bold text-lg uppercase tracking-wide">About JDPC Enugu</h3>
           </div>
+
           <p className="text-sm text-white/80 leading-relaxed mb-3">
             Justice and Peace are imperative for meaningful development. The Justice, Development, and
             Peace/Caritas Commission (JDPC) in Enugu Diocese, an arm of the Catholic Church, champions
@@ -96,8 +104,8 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* SOCIAL MEDIA ICONS - Now using react-icons */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* SOCIAL MEDIA ICONS */}
+            <div className="flex items-center gap-3 pt-4">
               {[
                 { Icon: FaFacebookF, label: "Facebook", href: "https://facebook.com" },
                 { Icon: FaTwitter, label: "Twitter", href: "https://twitter.com" },
@@ -128,8 +136,8 @@ export default function Footer() {
             © 2023. <span className="font-bold text-white">JDPC Enugu</span>. All rights reserved.
           </p>
           <p>
-            Website designed and hosted by{" "}
-            <span className="font-bold text-white">BuildingEwealth Info-Tech Limited</span>
+            Website developed and hosted by{" "}
+            <span className="font-bold text-white"> chidiebereijeoma135@gmail.com </span>
           </p>
         </div>
       </div>
